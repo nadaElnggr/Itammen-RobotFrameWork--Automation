@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.9.12 on win32)" generated="2025-01-05T11:15:10.463600" rpa="false" schemaversion="5">
+<suite id="s1" name="EditProfileScenarios" source="C:\Users\asus\Downloads\ITAMMEN (1)\ITAMMEN\ITAMMEN\TestCases\EditProfileScenarios.robot">
+<test id="s1-t1" name="Verify that the User Can Update all his Information" line="53">
+<kw name="Edit All Medical Information" owner="EditMedicalProfile">
+<kw name="Open My Browser" owner="EditProfileKeyWords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:11.165841" level="INFO">Opening browser 'chrome' to base url 'https://itammen.com'.</msg>
+<arg>${URL_PROD}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-05T11:15:11.165841" elapsed="10.058433"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-05T11:15:21.226868" elapsed="0.070368"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:11.165841" elapsed="10.131395"/>
+</kw>
+<kw name="Login with mail" owner="Login">
+<kw name="Navigate to the login page" owner="LoginKeyWords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:21.304687" level="INFO">Clicking element '//a[@routerlink="/login"]'.</msg>
+<arg>${LOGIN_NAV}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:21.303986" elapsed="0.448591"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-05T11:15:22.757553" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-05T11:15:21.752577" elapsed="1.004976"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:21.302374" elapsed="1.455179"/>
+</kw>
+<kw name="Enter needed form data" owner="LoginKeyWords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${EMAIL_LOG_FIELD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-05T11:15:22.757553" elapsed="0.352055"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:23.117638" level="INFO">Typing text 'nadamihelwan@gmail.com' into text field '//input[@type='email']'.</msg>
+<arg>${EMAIL_LOG_FIELD}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:23.117638" elapsed="0.526086"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-05T11:15:23.643724" elapsed="0.322691"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:23.970988" level="INFO">Typing text 'nadamihelwan@gmail.com127' into text field '//input[@type='password']'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${EMAIL_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:23.968978" elapsed="0.484140"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-05T11:15:25.465415" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-05T11:15:24.455125" elapsed="1.010290"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:22.757553" elapsed="2.707862"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeyWords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:25.469448" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:25.467441" elapsed="0.290241"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:25.467441" elapsed="0.291248"/>
+</kw>
+<kw name="Assert Reaching Home page" owner="LoginKeyWords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ASSERT_HOME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-05T11:15:25.758689" elapsed="0.391886"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:25.758689" elapsed="0.393894"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:21.297236" elapsed="4.855347"/>
+</kw>
+<kw name="Navigate to profile" owner="EditProfileKeyWords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:26.157110" level="INFO">Clicking element '//button[@routerlink='/patient-profile']'.</msg>
+<arg>${PROFILE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:26.154594" elapsed="0.484543"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-05T11:15:29.650871" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-05T11:15:26.639137" elapsed="3.011734"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:26.152583" elapsed="3.498288"/>
+</kw>
+<kw name="Click on Medical Information Tab" owner="EditMedicalProfileKeyWords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${MEDICAL_INFORMATION_TAB}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-05T11:15:29.653543" elapsed="0.331103"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:29.989875" level="INFO">Clicking element '//div[@id="mat-tab-label-2-1"]'.</msg>
+<arg>${MEDICAL_INFORMATION_TAB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:29.988899" elapsed="0.237653"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:29.650871" elapsed="0.575681"/>
+</kw>
+<kw name="Click SAVE_Edit Button" owner="EditMedicalProfileKeyWords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${MEDICAL_SAVE_EDIT_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-05T11:15:30.226552" elapsed="0.410347"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:30.636899" level="INFO">Clicking element '//app-patient-profile//mat-tab-body[2]//button[@class='mat-focus-indicator default-btn mat-raised-button mat-button-base mat-primary ng-star-inserted']'.</msg>
+<arg>${MEDICAL_SAVE_EDIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:30.636899" elapsed="0.307887"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:30.226552" elapsed="0.718234"/>
+</kw>
+<kw name="Choose Female Doctor" owner="EditMedicalProfileKeyWords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${DOCTOR_SCROLLER}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-05T11:15:30.946795" elapsed="0.379262"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:31.329144" level="INFO">Clicking element '//div[@class="doctor ng-star-inserted"]'.</msg>
+<arg>${DOCTOR_DIV}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:31.329144" elapsed="0.281861"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-05T11:15:33.617423" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-05T11:15:31.612752" elapsed="2.004671"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${AIDEN}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-05T11:15:33.617423" elapsed="0.337558"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:33.958340" level="INFO">Clicking element '//p[contains(text(), 'Doctor Aiden')]'.</msg>
+<arg>${AIDEN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:33.957055" elapsed="0.233898"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-05T11:15:36.202228" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-05T11:15:34.193210" elapsed="2.010826"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${SUBMIT_DOCTOR_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-05T11:15:36.204036" elapsed="0.368608"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:36.574657" level="INFO">Clicking element '//button[contains(text(), 'Confirm')]'.</msg>
+<arg>${SUBMIT_DOCTOR_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-05T11:15:36.572644" elapsed="0.276141"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:36.915330" level="INFO">Element '//input[@placeholder="Height"]' is displayed.</msg>
+<arg>${HIGHT_UPDATE_FIELD}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-05T11:15:36.848785" elapsed="0.066545"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-05T11:15:38.933036" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-05T11:15:36.915330" elapsed="2.018252"/>
+</kw>
+<status status="PASS" start="2025-01-05T11:15:30.946795" elapsed="7.988082"/>
+</kw>
+<kw name="Update Weight Field" owner="EditMedicalProfileKeyWords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<msg time="2025-01-05T11:15:39.354268" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-86.png"&gt;&lt;img src="selenium-screenshot-86.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-05T11:15:39.354268" level="FAIL">Element with locator '//input[@placeholder="Weight"]' not found.</msg>
+<arg>${WEIGHT_UPDATE_FIELD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="FAIL" start="2025-01-05T11:15:38.938913" elapsed="0.415355">Element with locator '//input[@placeholder="Weight"]' not found.</status>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${WEIGHT_UPDATE_FIELD}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-01-05T11:15:39.354268" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${WEIGHT_UPDATE_FIELD}</arg>
+<arg>${INT_WEIGHT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-05T11:15:39.354268" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-01-05T11:15:39.354268" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-05T11:15:38.936904" elapsed="0.417364">Element with locator '//input[@placeholder="Weight"]' not found.</status>
+</kw>
+<kw name="Update Hight Field" owner="EditMedicalProfileKeyWords">
+<status status="NOT RUN" start="2025-01-05T11:15:39.354268" elapsed="0.000000"/>
+</kw>
+<kw name="Click Diseases Box" owner="EditMedicalProfileKeyWords">
+<status status="NOT RUN" start="2025-01-05T11:15:39.354268" elapsed="0.000000"/>
+</kw>
+<kw name="Select Diseases" owner="EditMedicalProfileKeyWords">
+<status status="NOT RUN" start="2025-01-05T11:15:39.354268" elapsed="0.000000"/>
+</kw>
+<kw name="Click Allergies Box" owner="EditMedicalProfileKeyWords">
+<status status="NOT RUN" start="2025-01-05T11:15:39.370166" elapsed="0.000000"/>
+</kw>
+<kw name="Select Allergies" owner="EditMedicalProfileKeyWords">
+<status status="NOT RUN" start="2025-01-05T11:15:39.370166" elapsed="0.000000"/>
+</kw>
+<kw name="Add Medical Notes" owner="EditMedicalProfileKeyWords">
+<status status="NOT RUN" start="2025-01-05T11:15:39.370166" elapsed="0.000000"/>
+</kw>
+<kw name="Click Save Medical Information" owner="EditMedicalProfileKeyWords">
+<status status="NOT RUN" start="2025-01-05T11:15:39.370166" elapsed="0.000000"/>
+</kw>
+<kw name="Close My Recent Browser" owner="EditProfileKeyWords">
+<status status="NOT RUN" start="2025-01-05T11:15:39.370166" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-05T11:15:11.165841" elapsed="28.204325">Element with locator '//input[@placeholder="Weight"]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-01-05T11:15:11.165841" elapsed="28.204325">Element with locator '//input[@placeholder="Weight"]' not found.</status>
+</test>
+<status status="FAIL" start="2025-01-05T11:15:10.463600" elapsed="28.906566"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="EditProfileScenarios">EditProfileScenarios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
